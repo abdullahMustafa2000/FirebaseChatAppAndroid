@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="end"
+    android:layout_gravity="end"
+    android:orientation="vertical"
+    android:padding="4dp"
+    tools:ignore="RtlCompat">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/sender_message">
+
+        <TextView
+            android:id="@+id/timeTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:text="05:39pm"
+            android:textColor="#869CC1"
+            app:layout_constraintTop_toBottomOf="@id/messageTv"
+            app:layout_constraintStart_toStartOf="@id/messageTv"
+            app:layout_constraintEnd_toEndOf="@id/messageTv"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/messageTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="My Message"
+            android:textColor="@color/colorWhite"
+            android:layout_marginEnd="10dp"
+            android:padding="10dp"
+            tools:ignore="RtlCompat,Suspicious0dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/isSeenTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:gravity="end"
+        android:padding="3dp"
+        android:text="delivered"
+        android:textColor="#306CD1"
+        android:textSize="12sp" />
+
+</LinearLayout>

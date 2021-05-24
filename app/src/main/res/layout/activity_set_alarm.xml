@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UI.SetAlarmActivity"
+    android:background="@drawable/gradiant_background">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/save_cancel_btns_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/base"
+            android:layout_margin="5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/cancel_alarm"
+            android:textAllCaps="false"
+            android:textSize="10pt" />
+
+        <TextView
+            android:id="@+id/add_to_database_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/save_alarm"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="10pt" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--input title-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:theme="@style/alarmLabel">
+            <EditText
+                android:id="@+id/alarmMessage_TV"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/colorWhite"
+                android:hint="Alarm Message"
+                android:textColorHint="@color/colorBlack"
+                android:padding="10dp"
+                android:autofillHints="" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_gravity="center">
+            <Button
+                android:id="@+id/pickTime_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pick_the_hour"
+                android:textAllCaps="false"
+                android:padding="15dp"
+                android:textColor="@color/colorBlack"
+                android:background="@drawable/black_rounded_btn"
+                android:layout_margin="5dp"/>
+            <Button
+                android:id="@+id/pickDate_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pick the day"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBlack"
+                android:background="@drawable/black_rounded_btn"
+                android:padding="15dp"
+                android:layout_margin="5dp"/>
+
+            <Spinner
+                android:id="@+id/repeat_options_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/black_rounded_btn"
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                tools:targetApi="lollipop" />
+        </LinearLayout>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Share event with:"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="32dp"
+        android:layout_gravity="center"
+        android:textSize="8pt"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/usersAlarm_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

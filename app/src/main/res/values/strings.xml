@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">My Chat Application</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cancel_alarm">Cancel</string>
+    <string name="save_alarm">Save</string>
+    <string name="pick_the_hour">Pick the hour</string>
+
+    <string-array name="repeat_options">
+        <item>just once</item>
+        <item>daily</item>
+        <item>weekly</item>
+        <item>monthly</item>
+    </string-array>
+</resources>

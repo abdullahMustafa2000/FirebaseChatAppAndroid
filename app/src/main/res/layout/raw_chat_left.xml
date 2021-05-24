@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="start"
+    android:layout_gravity="start"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:ignore="RtlCompat">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/recrvire_message">
+
+        <TextView
+            android:id="@+id/timeTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:padding="5dp"
+            android:text="05:39pm"
+            android:textColor="@color/oil"
+            app:layout_constraintTop_toBottomOf="@id/messageTv"
+            app:layout_constraintStart_toStartOf="@id/messageTv"
+            app:layout_constraintEnd_toEndOf="@id/messageTv"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/messageTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="My Message"
+            android:textColor="@color/colorBlack"
+            android:layout_marginEnd="10dp"
+            android:padding="10dp"
+            tools:ignore="RtlCompat,Suspicious0dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/isSeenTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:padding="5dp"
+        android:text="/alkvla/k"
+        android:textColor="#306CD1"
+        android:textSize="12sp"
+        android:layout_gravity="end"
+        android:layout_marginRight="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="20dp"
+        android:visibility="gone"/>
+
+</LinearLayout>
